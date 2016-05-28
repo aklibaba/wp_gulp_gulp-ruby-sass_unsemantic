@@ -1,0 +1,65 @@
+// Font sizes passed as rems
+@mixin font-size($rem_size: 1) {
+	font-size: ($rem_size * 16) * 1px;
+	font-size: ($rem_size * 1) * 1rem;
+}
+
+// Center block
+@mixin center-block {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+/* @usage: .container-with-floated-children {
+  @extend %clearfix;
+} */
+%clearfix {
+  *zoom: 1;
+  &:before, &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+/* breakpoints */
+@mixin break-large {
+  @media only screen and (max-width: 60em) {
+    @content;
+  }
+}
+
+@mixin break-medium {
+  @media only screen and (max-width: 40em) {
+    @content;
+  }
+}
+
+@mixin break-small {
+  @media only screen and (max-width: 30em) {
+    @content;
+  }
+}
+
+/* ==========================================================================
+   mixins for shapes
+   ========================================================================== */
+
+/* if you want to use in pseudo after/before remmeber add content: ""; */
+@mixin triangle($borders-side: 20px, $border-bottom: 20px, $color: green) {
+        width: 0;
+        height: 0;
+        border-bottom-width: $border-bottom;
+        border-bottom-color: $color;
+        border-bottom-style: solid;
+        border-left-width: $borders-side;
+        border-left-color: transparent;
+        border-left-style: solid;
+        border-right-width: $borders-side;
+        border-right-color: transparent;
+        border-right-style: solid;
+}

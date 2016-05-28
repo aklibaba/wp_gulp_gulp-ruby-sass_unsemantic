@@ -1,0 +1,40 @@
+.clear,
+.entry-content,
+.comment-content,
+.site-header,
+.site-content,
+.site-footer,
+nav,
+nav ul {
+	@extend %clearfix;
+}
+
+// backup done before changing clear meehtod 2016-05-28
+/* .clear:before,
+.clear:after,
+.entry-content:before,
+.entry-content:after,
+.comment-content:before,
+.comment-content:after,
+.site-header:before,
+.site-header:after,
+.site-content:before,
+.site-content:after,
+.site-footer:before,
+.site-footer:after,
+nav:before,
+nav:after,
+nav ul:before,
+nav ul:after {
+	@include clearfix;
+}
+
+.clear:after,
+.entry-content:after,
+.comment-content:after,
+.site-header:after,
+.site-content:after,
+.site-footer:after {
+	@include clearfix-after;
+} */
+

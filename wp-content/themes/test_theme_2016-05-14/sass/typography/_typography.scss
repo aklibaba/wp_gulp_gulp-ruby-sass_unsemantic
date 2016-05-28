@@ -1,0 +1,14 @@
+body,
+button,
+input,
+select,
+textarea {
+	color: $color-text-body;
+	font-family: $font-copy;
+	@include font-size(1);
+	line-height: $font-line-height-body;
+}
+
+@import "headings";
+
+@import "copy";

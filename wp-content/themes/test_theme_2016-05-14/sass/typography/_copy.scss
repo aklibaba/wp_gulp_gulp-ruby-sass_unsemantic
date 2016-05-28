@@ -1,0 +1,33 @@
+p {
+	margin-bottom: 1.5em;
+	font-family: $font-copy;
+}
+
+em, i {
+	font-style: italic;
+}
+
+blockquote {
+	margin: 0 1.5em;
+}
+
+
+
+pre {
+	background: $color-background-pre;
+	font-family: $font-pre;
+	@include font-size(0.9375);
+	line-height: $font-line-height-pre;
+	margin-bottom: 1.6em;
+	max-width: 100%;
+	overflow: auto;
+	padding: 1.6em;
+}
+
+
+
+mark, ins {
+	background: $color-background-ins;
+	text-decoration: none;
+}
+

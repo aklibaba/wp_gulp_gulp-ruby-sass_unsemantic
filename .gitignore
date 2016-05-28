@@ -1,0 +1,27 @@
+## General
+.cvs
+.htaccess
+.svn
+*.bak
+*.log
+*.swp
+
+## Windows
+Desktop.ini
+Thumbs.db
+
+
+## WordPress
+wp-config.php
+wp-content/uploads/
+wp-content/cache/*
+wp-content/cache/supercache/*
+wp-content/cache/
+wp-content/backups/
+sitemap.xml
+sitemap.xml.gz
+
+## Development
+/wp-content/themes/test_theme_2016-05-14/.sass-cache
+/wp-content/themes/test_theme_2016-05-14/bower_components
+/wp-content/themes/test_theme_2016-05-14/node_modules

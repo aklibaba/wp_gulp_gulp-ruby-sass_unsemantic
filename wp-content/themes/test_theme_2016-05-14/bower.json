@@ -1,0 +1,6 @@
+{
+  "name": "test_theme_2016-05-14",
+  "dependencies": {
+    "unsemantic": "^1.1.3"
+  }
+}

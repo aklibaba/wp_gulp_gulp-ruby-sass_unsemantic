@@ -1,0 +1,317 @@
+/*--------------------------------------------------------------
+## Menus
+--------------------------------------------------------------*/
+/*start alex modifications 2016-04-28*/
+
+.navWrap {
+    position: relative;
+    width: 98%;
+    margin: 0 auto;
+}
+
+nav.main-navigation {
+    position: absolute;
+    width: 100%;
+    top: 28px;
+    left: 0;
+}
+
+#menu-large {
+    margin: auto;
+}
+
+ul.menu {
+    display: none;
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+        text-align: center;
+}
+
+ul.menu li{
+    display: inline-block;    
+}
+
+.menu-mainleft-container li {
+        margin: 0 0 0 20px;
+}
+
+.menu-mainright-container li {
+        margin: 0 20px 0 0;
+}
+
+.menu-mainleft-container {
+    float: left;
+    width: 50%;
+}
+
+.menu-mainright-container {
+    float: right;
+    width: 50%;
+}
+
+@media screen and (max-width: 57em ) {
+
+    nav.main-navigation {
+        position: fixed;
+        bottom: 0;
+        top: auto;
+        width: 100%;
+        box-shadow: 0 0 20px rgba(0,0,0,0.4);
+}
+}
+
+
+@media screen and (min-width: 32em) {
+    #menu-small {
+        display: none;
+    }
+    
+    .main-navigation ul {
+        display: block;
+    }
+}
+
+#menu-small {
+    text-align: center;
+    background: #eee;
+}
+
+#menu-small > div {
+    display: inline-block;
+}
+
+#menu-small .tel {
+    float: left;
+    margin: 5px  0 0 3%;
+}
+
+#menu-small .tel span,
+#menu-small .email span {
+    display: none;
+}
+
+#menu-small .tel i,
+#menu-small .email i {
+    font-size: 35px;
+    color: #666;
+    width: 37px;
+}
+
+#menu-small #rozwin {
+    position: relative;
+    top: -17px;
+    background: #aaa;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    text-indent: -9999px;
+    z-index: 1000;
+    cursor: pointer;
+    color: #000;
+    padding: 15px;
+    box-sizing: content-box;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    -webkit-animation-name: rozwinBounce;
+            animation-name: rozwinBounce;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+    -webkit-animation-iteration-count: 3;
+            animation-iteration-count: 3;
+    -webkit-animation-timing-function: ease-in-out;
+            animation-timing-function: ease-in-out;
+    -webkit-animation-delay: 3s;
+            animation-delay: 3s;
+}
+
+#menu-small #rozwin.open,
+#menu-small #rozwin:hover {
+    box-shadow: 0 0 10px rgba(0,0,0,0.45) inset;
+}
+
+#menu-small #rozwin span {
+    background: #fff;
+    height: 3px;
+    position: absolute;
+    top: 50%;
+    margin-top: -2px;
+    left: 50%;
+    margin-left: -11px;
+    width: 22px;
+    -webkit-transition: all 0.7s;
+    transition: all 0.7s;
+}
+
+#menu-small #rozwin.open span {
+    background: inherit;
+}
+
+#menu-small #rozwin span:before{
+    content: "";
+    position: absolute;
+    top: -7px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    -webkit-transition: all 0.7s;
+    transition: all 0.7s;
+}
+
+#menu-small #rozwin span:after {
+    content: "";
+    position: absolute;
+    bottom: -7px;   
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit;    
+    -webkit-transition: all 0.7s;    
+    transition: all 0.7s;
+}
+
+#menu-small #rozwin.open span:before,
+#menu-small #rozwin.open span:after {
+    background: #fff;   
+    top: 0;
+}
+
+#menu-small #rozwin.open span:before {
+    -webkit-transform: rotate(135deg);
+            transform: rotate(135deg);
+}
+
+#menu-small #rozwin.open span:after {
+    -webkit-transform: rotate(225deg);
+            transform: rotate(225deg);
+}
+
+#menu-small .email {
+    float: right; 
+    margin: 5px 3% 0 0;
+}
+
+/*Animations for nav*/
+@-webkit-keyframes rozwinBounce {
+    0%, 20%, 50%, 80%, 100% {
+    -webkit-transform: translateY(0);
+}
+40% {
+    -webkit-transform: translateY(-20px);
+}
+60% {
+    -webkit-transform: translateY(-10px);
+}
+}
+@keyframes rozwinBounce {
+    0%, 20%, 50%, 80%, 100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+}
+40% {
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px);
+}
+60% {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+}
+}
+
+
+/*end alex modifications 2016-04-28*/
+
+.main-navigation li {
+    position: relative;
+}
+
+.main-navigation a {
+    display: block;
+    text-decoration: none;
+}
+
+.main-navigation ul ul {
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+    float: left;
+    position: absolute;
+    top: 1.5em;
+    left: -999em;
+    z-index: 99999;
+}
+
+.main-navigation ul ul ul {
+    left: -999em;
+    top: 0;
+}
+
+.main-navigation ul ul a {
+    width: 200px;
+}
+
+.main-navigation ul ul li {
+
+}
+
+.main-navigation li:hover > a,
+.main-navigation li.focus > a {
+}
+
+.main-navigation ul ul :hover > a,
+.main-navigation ul ul .focus > a {
+}
+
+.main-navigation ul ul a:hover,
+.main-navigation ul ul a.focus {
+}
+
+.main-navigation ul li:hover > ul,
+.main-navigation ul li.focus > ul {
+    left: auto;
+}
+
+.main-navigation ul ul li:hover > ul,
+.main-navigation ul ul li.focus > ul {
+    left: 100%;
+}
+
+.main-navigation .current_page_item > a,
+.main-navigation .current-menu-item > a,
+.main-navigation .current_page_ancestor > a,
+.main-navigation .current-menu-ancestor > a {
+}
+
+/* Small menu. */
+.menu-toggle,
+.main-navigation.toggled ul {
+    display: block;
+}
+
+@media screen and (min-width: 37.5em) {
+    .menu-toggle {
+        display: none;
+    }
+
+}
+
+.site-main .comment-navigation,
+.site-main .posts-navigation,
+.site-main .post-navigation {
+    margin: 0 0 1.5em;
+    overflow: hidden;
+}
+
+.comment-navigation .nav-previous,
+.posts-navigation .nav-previous,
+.post-navigation .nav-previous {
+    float: left;
+    width: 50%;
+}
+
+.comment-navigation .nav-next,
+.posts-navigation .nav-next,
+.post-navigation .nav-next {
+    float: right;
+    text-align: right;
+    width: 50%;
+}
