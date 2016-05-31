@@ -1,14 +1,37 @@
-body,
-button,
-input,
-select,
-textarea {
-	color: $color-text-body;
-	font-family: $font-copy;
-	@include font-size(1);
-	line-height: $font-line-height-body;
-}
+/*
+ * set root font size
+ * use html
+ * using font-size with rems
+ * browser root font size =16
+ * ex. 1.4 rem = 1.4 x 16 = 22.4 px
+ * all other dom elements font size is relative to html font-size
+ */
+ html {
 
-@import "headings";
+ 	@include break-large() {
+ 		@include font-size(1.4);
+ 	}
 
-@import "copy";
+ 	@include break-medium() {
+ 		@include font-size(1.1);
+ 	}
+
+ 	@include break-small() {
+ 		@include font-size(0.9);
+ 	}
+ }
+
+ body,
+ button,
+ input,
+ select,
+ textarea {
+ 	color: $color-text-body;
+ 	font-family: $font-copy;
+ 	@include font-size(1);
+ 	line-height: $font-line-height-body;
+ }
+
+ @import "headings";
+
+ @import "copy";

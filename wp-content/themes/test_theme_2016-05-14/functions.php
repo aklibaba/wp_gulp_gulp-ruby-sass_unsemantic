@@ -111,11 +111,35 @@ function test_theme_2016_05_14_widgets_init() {
 }
 add_action( 'widgets_init', 'test_theme_2016_05_14_widgets_init' );
 
+/*
+ * Enqueue my local font
+ */
+
+
+
+/*
+ * Easier way to handle Google fonts
+ */
+function google_fonts() {
+	$query_args = array(
+		// 'family' => 'Montserrat:400,700|Open+Sans:400,700|Oswald:700',
+		'family' => 'Open+Sans:400,700|Oswald:700',
+		'subset' => 'latin,latin-ext',
+		);
+	wp_enqueue_style( 'google_fonts', add_query_arg( $query_args, "//fonts.googleapis.com/css" ), array(), null );
+}
+
+
 /**
  * Enqueue scripts and styles.
  */
 function test_theme_2016_05_14_scripts() {
 	wp_enqueue_style( 'test_theme_2016-05-14-style', get_template_directory_uri() . '/style.min.css' );
+
+	google_fonts();
+
+	//enqueue local fonts: Montserrat...
+	wp_enqueue_style( 'local-fonts', get_template_directory_uri() . '/fonts/fonts_stylesheet.css' );
 
 	wp_enqueue_script( 'test_theme_2016-05-14-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
